@@ -1,0 +1,17 @@
+{
+  "title": "Contact",
+  "intro": "Have a project in mind, or just want to say hello? Drop me a line.",
+  "email": "hello@example.com",
+  "cardTitle": "Find me here",
+  "stamp": "/badges/stamp-pune.webp",
+  "details": [
+    { "label": "Location", "value": "Ho Chi Minh City, Vietnam", "href": "" },
+    { "label": "Phone", "value": "", "href": "" },
+    { "label": "Availability", "value": "Open to freelance projects and full-time roles", "href": "" }
+  ],
+  "socials": [
+    { "label": "Behance", "url": "" },
+    { "label": "Instagram", "url": "" },
+    { "label": "LinkedIn", "url": "" }
+  ]
+}

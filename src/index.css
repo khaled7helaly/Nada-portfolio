@@ -1,0 +1,96 @@
+/* Design system: every section reads from here.
+   Change a token in @theme and the whole site follows. (Tailwind v4)
+   Fonts are loaded in index.html. */
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #eee8dc;      /* page background */
+  --color-card: #f5f3ef;       /* cards / sheets */
+  --color-ink: #1d1a17;        /* text + borders */
+  --color-brand: #cd151f;      /* signature red */
+  --color-brand-deep: #9f0a12; /* wax + shadows */
+  --color-stamp: #24323d;      /* ink stamp */
+
+  --font-display: "Bodoni Moda", "Playfair Display", "Times New Roman", serif;
+  --font-serif: "Playfair Display", "Times New Roman", serif;
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-hand: "Reenie Beanie", "Bradley Hand", "Segoe Script", cursive;
+
+  --shadow-sheet: 0 10px 22px rgb(0 0 0 / 0.16);
+}
+
+@layer base {
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+    /* paper grain */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .3 0 0 0 0 .25 0 0 0 .2 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  ::selection { background: var(--color-brand); color: var(--color-paper); }
+}
+
+@layer components {
+  /* paper card */
+  .sheet { @apply relative border border-ink/90 bg-card shadow-sheet; }
+
+  /* tilted red sheet behind anything. Tilt: style="--tilt: 6deg" */
+  .tilt-backing { @apply relative isolate; }
+  .tilt-backing::before {
+    content: "";
+    @apply absolute -inset-x-1.5 -top-1 -bottom-1.5 -z-10 bg-brand;
+    transform: rotate(var(--tilt, -8deg));
+    box-shadow: 0 6px 16px rgb(80 0 0 / 0.25);
+  }
+
+  /* same, but the red sheet only shows on hover / focus */
+  .tilt-on-hover::before {
+    opacity: 0;
+    transform: rotate(0deg);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  .tilt-on-hover:hover::before,
+  .tilt-on-hover:focus-within::before {
+    opacity: 1;
+    transform: rotate(var(--tilt, -8deg));
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .tilt-on-hover::before { transition: none; }
+  }
+
+  /* red wax seal: size and position come from utilities */
+  .wax-seal {
+    position: relative;
+    display: grid;
+    place-items: center;
+    border-radius: 48% 52% 50% 50% / 52% 48% 52% 48%;
+    background: radial-gradient(circle at 32% 28%, #e8454a 0%, var(--color-brand) 40%, var(--color-brand-deep) 100%);
+    box-shadow: 0 3px 6px rgb(0 0 0 / 0.35), inset 0 -2px 4px rgb(0 0 0 / 0.28), inset 0 2px 3px rgb(255 255 255 / 0.25);
+    color: rgb(70 0 4 / 0.55);
+    font: italic 400 22px / 1 var(--font-serif);
+    text-shadow: 0 1px 0 rgb(255 255 255 / 0.28);
+  }
+  .wax-seal::before {
+    content: "";
+    position: absolute;
+    inset: 7px;
+    border-radius: 50%;
+    border: 1.5px solid rgb(60 0 4 / 0.25);
+    box-shadow: 0 1px 0 rgb(255 255 255 / 0.22);
+  }
+
+  .photo-placeholder {
+    background: linear-gradient(180deg, #a9cbe0 0%, #cfe0e6 28%, #5f8a6c 29%, #3f6b52 62%, #2c4f47 100%);
+  }
+
+  /* scroll story: useScrollProgress writes --p (0 → 1) on .story; default 1 = fully drawn */
+  .story { --p: 1; }
+  .story-line { clip-path: inset(0 0 calc((1 - var(--p)) * 100%) 0); }
+  /* fades + rises in once --p passes this element's --at */
+  .reveal {
+    --t: clamp(0, calc((var(--p) - var(--at, 0)) * 10), 1);
+    opacity: var(--t);
+    translate: 0 calc((1 - var(--t)) * 28px);
+  }
+}

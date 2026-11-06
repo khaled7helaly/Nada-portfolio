@@ -1,0 +1,30 @@
+{
+  "title": "Services",
+  "intro": "Three ways we can work together.",
+  "items": [
+    {
+      "id": "3d",
+      "title": "3D design",
+      "description": "Three-dimensional visuals that give a brand or a product real presence, from the first concept to the final render.",
+      "deliverables": ["Product and packaging renders", "Scene and environment design", "3D assets for campaigns"],
+      "image": "",
+      "rotate": -4
+    },
+    {
+      "id": "2d",
+      "title": "2D design",
+      "description": "Clear, well-structured graphics for print and screen: layouts, illustration and everything that has to work at a glance.",
+      "deliverables": ["Posters and print layouts", "Illustration", "Social media graphics"],
+      "image": "",
+      "rotate": 3
+    },
+    {
+      "id": "key-visuals",
+      "title": "Key visuals",
+      "description": "The one image a whole campaign is built around, developed from an idea into a visual concept that holds together everywhere.",
+      "deliverables": ["Campaign key visuals", "Visual concept development", "Mood boards and art direction"],
+      "image": "",
+      "rotate": -2
+    }
+  ]
+}

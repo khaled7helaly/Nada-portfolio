@@ -1,0 +1,25 @@
+{
+  "title": "About (me)",
+  "paragraphs": [
+    "A young graphic designer based in Ho Chi Minh City with a strong passion for design and visual arts that began in childhood. Over the past four years, I have built a solid foundation through academic training and hands-on experience in diverse creative projects.",
+    "My core strengths include 3D design, 2D design, and the development of visual concepts and key visuals. I am particularly confident in transforming ideas into engaging, well-structured, and practical design solutions. I am seeking a dynamic working environment where I can continue learning while contributing meaningfully to the team and the projects I am involved in."
+  ],
+  "closing": "Thanks for taking time to visit my portfolio!",
+  "profile": {
+    "name": "Nhi",
+    "greeting": "Hi! It’s Nhi here",
+    "photo": "",
+    "photoAlt": "Portrait of Nhi",
+    "facts": [
+      { "label": "Birthday", "value": "09/12/2003" },
+      { "label": "Zodiac", "value": "Sagittarius" },
+      { "label": "MBTI", "value": "INTJ" },
+      { "label": "Location", "value": "HCM City" }
+    ],
+    "languagesTitle": "Languages",
+    "languages": [
+      { "name": "Vietnamese", "level": "Native" },
+      { "name": "English", "level": "Advanced" }
+    ]
+  }
+}

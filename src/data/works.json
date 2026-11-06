@@ -1,0 +1,18 @@
+{
+  "title": "Work",
+  "homeLimit": 3,
+  "viewAllLabel": "view all work",
+  "emptyLabel": "Nothing here yet.",
+  "categories": [
+    { "key": "3d", "label": "3D design" },
+    { "key": "2d", "label": "2D design" }
+  ],
+  "items": [
+    { "id": "alpha", "title": "Alpha", "category": "3d", "year": 2025, "image": "", "alt": "", "href": "", "featured": true },
+    { "id": "bravo", "title": "Bravo", "category": "3d", "year": 2025, "image": "", "alt": "", "href": "", "featured": true },
+    { "id": "charlie", "title": "Charlie", "category": "3d", "year": 2024, "image": "", "alt": "", "href": "", "featured": false },
+    { "id": "delta", "title": "Delta", "category": "2d", "year": 2025, "image": "", "alt": "", "href": "", "featured": true },
+    { "id": "echo", "title": "Echo", "category": "2d", "year": 2024, "image": "", "alt": "", "href": "", "featured": false },
+    { "id": "foxtrot", "title": "Foxtrot", "category": "2d", "year": 2024, "image": "", "alt": "", "href": "", "featured": false }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Nhi | Graphic Designer Portfolio",
+  "description": "Portfolio of Nhi, a graphic designer in Ho Chi Minh City working across 3D design, 2D design and key visuals.",
+  "sections": ["hero", "about", "services", "work", "story", "certifications"],
+  "seal": "N",
+  "stamp": {
+    "ring": "PORTFOLIO 2025 • HCMC • PORTFOLIO 2025 • ",
+    "center": "APPROVED"
+  },
+  "resume": {
+    "label": "resume",
+    "url": ""
+  }
+}

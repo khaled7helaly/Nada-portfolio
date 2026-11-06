@@ -1,0 +1,14 @@
+{
+  "title": "how I got here",
+  "notes": [
+    { "at": 3, "side": "right", "text": "it started with a pencil,", "mark": "back in childhood" },
+    { "at": 25, "side": "left", "text": "four years of learning", "mark": "by making" },
+    { "at": 47, "side": "right", "text": "3D, 2D and a lot of", "mark": "key visuals" },
+    { "at": 69, "side": "left", "text": "always curious,", "mark": "always learning" },
+    { "at": 89, "side": "right", "text": "and the proof?", "mark": "just ahead" }
+  ],
+  "collage": [
+    { "image": "/badges/hawa-strips.webp", "side": "right", "top": 13, "width": 40, "rotate": -3, "at": 0.1 },
+    { "image": "/badges/rug.webp", "side": "left", "top": 36, "width": 22, "rotate": 8, "at": 0.38 }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "title": "Certified",
+  "hint": "scroll sideways",
+  "items": [
+    { "id": "c1", "title": "Certificate one", "issuer": "Issuer", "year": 2025, "image": "/badges/stamp-bengaluru.webp", "rotate": -4, "href": "" },
+    { "id": "c2", "title": "Certificate two", "issuer": "Issuer", "year": 2025, "image": "/badges/stamp-pune.webp", "rotate": 3, "href": "" },
+    { "id": "c3", "title": "Certificate three", "issuer": "Issuer", "year": 2024, "image": "/badges/cross-stitch.webp", "rotate": -2, "href": "" },
+    { "id": "c4", "title": "Certificate four", "issuer": "Issuer", "year": 2024, "image": "/badges/firewater.webp", "rotate": 2, "href": "" }
+  ]
+}
